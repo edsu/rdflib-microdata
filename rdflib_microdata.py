@@ -9,5 +9,6 @@ register("microdata", Parser, "rdflib_microdata", "MicrodataParser")
 class MicrodataParser(Parser):
 
     def parse(self, source, sink, **kwargs):
-        items = microdata._build_graph(source)
+        # TODO: something not right here with source :-(
+        items = microdata.get_items(source)
         # build the graph now :-)
