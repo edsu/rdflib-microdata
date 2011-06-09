@@ -23,17 +23,19 @@ class MicrodataParser(Parser):
         else:
             s = BNode()
 
-        # must have a profile for the item to convert to rdf data model
+        # MUST have a profile for the item to convert to rdf data model
         if not item.itemtype:
             return
 
-        # create a vocab namespace, appending a # as necessary
+        # create a vocab namespace, appending a # if it isn't a hash or slash 
+        # already
         ns = str(item.itemtype)
         if ns.endswith("#") or ns.endswith("/"):
             ns = Namespace(item.itemtype)
         else:
             ns = Namespace(ns + "#")
 
+        # type the resource
         sink.add((s, RDF.type, str(item.itemtype)))
 
         # go through each property/value and add triples to the graph
