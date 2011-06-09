@@ -9,5 +9,5 @@ setup(
     url = "http://github.com/edsu/rdflib-microdata",
     py_modules = ['rdflib_microdata'],
     test_suite = 'test',
-    install_requires = ['html5lib'],
+    install_requires = ['html5lib', 'rdflib'],
 )
