@@ -6,7 +6,7 @@ want to:
 >>> import rdflib
 >>> import rdflib_microdata
 >>> g = rdflib.Graph()
->>> g.parse("https://raw.github.com/edsu/microdata/master/test-data/example.html", >>> format="microdata")
+>>> g.parse("https://raw.github.com/edsu/microdata/master/test-data/example.html", format="microdata")
 >>> print g.serialize()
 """
 
