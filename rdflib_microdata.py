@@ -45,7 +45,7 @@ class MicrodataParser(Parser):
                 if isinstance(v, microdata.Item):
                     o = self._add_item(v, sink) 
                 elif isinstance(v, microdata.URI):
-                    o = URIRef(v.string)
+                    o = URIRef(str(v))
                 else:
                     o = Literal(v)
                 # TODO: handle dates
