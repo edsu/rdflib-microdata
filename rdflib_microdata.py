@@ -1,3 +1,15 @@
+"""
+This rdflib plugin lets you parse html5 microdata into an RDF graph. You 
+shouldn't have to use this module directly, since it's a plugin. You'll just 
+want to:
+
+>>> import rdflib
+>>> import rdflib_microdata
+>>> g = rdflib.Graph()
+>>> g.parse("https://raw.github.com/edsu/microdata/master/test-data/example.html", >>> format="microdata")
+>>> print g.serialize()
+"""
+
 import microdata
 
 from rdflib import URIRef, Literal, BNode, Namespace, RDF
