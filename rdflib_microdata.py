@@ -48,7 +48,7 @@ class MicrodataParser(Parser):
             ns = Namespace(ns + "#")
 
         # type the resource
-        sink.add((s, RDF.type, str(item.itemtype)))
+        sink.add((s, RDF.type, URIRef(item.itemtype)))
 
         # go through each property/value and add triples to the graph
         for item_property, item_values in item.props.items():
