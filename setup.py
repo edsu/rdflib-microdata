@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'rdflib-microdata',
-    version = '0.1',
+    version = '0.2.0',
     description = "rdflib extension for parsing microdata into an rdf graph",
     author = "Ed Summers",
     author_email = "ehs@pobox.com",
